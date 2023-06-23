@@ -1,0 +1,27 @@
+{
+  "name": "server-template",
+  "version": "1.0.0",
+  "description": "Plantilla para levantar un servidor en NodeJS",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GianPierree/node-server-template.git"
+  },
+  "author": "Gian Muñoz <gian0291@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GianPierree/node-server-template/issues"
+  },
+  "homepage": "https://github.com/GianPierree/node-server-template#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "https": "^1.0.0"
+  }
+}
