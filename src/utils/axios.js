@@ -1,8 +1,15 @@
-const axios = require("axios");
-const config = require("../config/index");
+import axios from "axios";
+import config from "../config/index.js";
 
-const api = axios.create({
-    baseURL: config.B24_HOOK,
-});
+export default class ApiService {
+  constructor() {
+    this.api = axios.create({
+      baseURL: config.B24_HOOK,
+    });
+  }
 
-module.exports = { api };
+  // Puedes agregar métodos adicionales si es necesario
+  getInstance() {
+    return this.api;
+  }
+}

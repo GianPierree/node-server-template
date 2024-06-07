@@ -1,7 +1,10 @@
-require('dotenv').config()
+import dotenv from "dotenv";
+import { ENV } from "./constants.js";
 
-module.exports = {
-    ENV: process.env.ENV || 'dev',
-    PORT: process.env.PORT || 8080,
-    B24_HOOK: process.env.B24_HOOK || 'https://www.test.com'
-}
+dotenv.config();
+
+export const config = {
+  ENV: process.env.ENV || ENV.DEVELOPMENT,
+  PORT: process.env.PORT || 8080,
+  B24_HOOK: process.env.B24_HOOK || "https://www.test.com",
+};

@@ -1,8 +1,8 @@
-const fs = require("fs");
+import fs from "fs";
+import { config } from "../config/index.js";
+import { ENV } from "../config/constants.js";
 
-const privateKey = fs.readFileSync("./ssl/key.pem", "utf8");
-const certificate = fs.readFileSync("./ssl/certificate.crt", "utf8");
+const privateKey = (config.ENV === ENV.PRODUCTION) ? fs.readFileSync("./ssl/key.pem", "utf8"): '';
+const certificate = (config.ENV === ENV.PRODUCTION) ? fs.readFileSync("./ssl/certificate.crt", "utf8"): '';
 
-const credentials = { key: privateKey, cert: certificate };
-
-module.exports = { credentials };
+export const credentials = { key: privateKey, cert: certificate };

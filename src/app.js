@@ -1,5 +1,4 @@
-const Server = require('./models/server')
+import Server from './models/server.model.js'
+
 const server = new Server()
-
 server.listen()
-
